@@ -1,6 +1,5 @@
 package resources.testdata;
 
-import com.bestbuyapi.constants.Path;
 import com.bestbuyapi.utils.PropertyReader;
 import io.restassured.RestAssured;
 import org.junit.BeforeClass;
@@ -17,7 +16,7 @@ public class TestBase {
 
         RestAssured.baseURI = propertyReader.getProperty("baseUrl");
         RestAssured.port = Integer.parseInt(propertyReader.getProperty("port"));
-        RestAssured.basePath = Path.STORE;
+        //RestAssured.basePath = Path.STORE;
     }
 
 }

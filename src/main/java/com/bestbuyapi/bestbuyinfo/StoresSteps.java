@@ -1,6 +1,7 @@
 package com.bestbuyapi.bestbuyinfo;
 
 import com.bestbuyapi.constants.EndPoints;
+import com.bestbuyapi.constants.Path;
 import com.bestbuyapi.model.StorePojo;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
@@ -24,7 +25,7 @@ public class StoresSteps {
                 .contentType(ContentType.JSON)
                 .body(storePojo)
                 .when()
-                .post()
+                .post(Path.STORE)
                 .then();
 
     }
@@ -35,7 +36,7 @@ public class StoresSteps {
         return SerenityRest.given()
                 .log().all()
                 .when()
-                .get()
+                .get(Path.STORE)
                 .then()
                 .extract()
                 .path("data.findAll{it.name='"+name+"'}.get(0)");
@@ -56,7 +57,7 @@ public class StoresSteps {
                 .pathParam("storeID",storeID)
                 .body(storePojo)
                 .when()
-                .put(EndPoints.CHANGE_STORE_INFO)
+                .put(Path.STORE+EndPoints.CHANGE_STORE_INFO)
                 .then();
 
     }
@@ -67,7 +68,7 @@ public class StoresSteps {
                 .log().all()
                 .pathParam("storeID",storeID)
                 .when()
-                .delete(EndPoints.DELETE_STORE)
+                .delete(Path.STORE+ EndPoints.DELETE_STORE)
                 .then();
 
     }
@@ -78,7 +79,7 @@ public class StoresSteps {
                 .log().all()
                 .pathParam("storeID",storeID)
                 .when()
-                .get(EndPoints.GET_STORE_BY_ID)
+                .get(Path.STORE+ EndPoints.GET_STORE_BY_ID)
                 .then();
     }
 

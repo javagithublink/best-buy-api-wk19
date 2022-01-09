@@ -16,6 +16,8 @@ import static org.hamcrest.Matchers.hasValue;
 @RunWith(SerenityRunner.class)
 public class StoreCRUDTest extends TestBase {
 
+
+
    /* "id": 4,
             "name": "Harrow123",
             "type": "BigBox",
