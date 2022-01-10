@@ -18,4 +18,14 @@ public class EndPoints {
     public static final String CHANGE_SERVICE_INFO = "/{serviceID}";
     public static final String DELETE_SERVICE = "/{serviceID}";
 
+    /**
+     * Products End Points
+     */
+
+
+    public static final String GET_PRODUCT_BY_ID = "/{productID}";
+    public static final String CHANGE_PRODUCT_INFO = "/{productID}";
+    public static final String DELETE_PRODUCT = "/{productID}";
+
+
 }

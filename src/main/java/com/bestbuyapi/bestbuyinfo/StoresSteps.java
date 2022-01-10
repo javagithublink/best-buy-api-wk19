@@ -35,6 +35,7 @@ public class StoresSteps {
 
         return SerenityRest.given()
                 .log().all()
+                .queryParam("name",name)
                 .when()
                 .get(Path.STORE)
                 .then()

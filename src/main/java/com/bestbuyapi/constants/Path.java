@@ -14,4 +14,11 @@ public class Path {
 
     public static final String SERVICE = "/services";
 
+
+    /**
+     * Product base path
+     */
+
+    public static final String PRODUCT = "/products";
+
 }

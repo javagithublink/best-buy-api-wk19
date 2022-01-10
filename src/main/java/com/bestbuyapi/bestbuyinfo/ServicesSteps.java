@@ -33,6 +33,7 @@ public class ServicesSteps {
 
         return SerenityRest.given()
                 .log().all()
+                .queryParam("name",name)
                 .when()
                 .get(Path.SERVICE)
                 .then()
