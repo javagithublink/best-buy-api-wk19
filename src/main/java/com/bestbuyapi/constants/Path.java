@@ -21,4 +21,10 @@ public class Path {
 
     public static final String PRODUCT = "/products";
 
+    /**
+     * Category base path
+     */
+
+    public static final String CATEGORY = "/categories";
+
 }

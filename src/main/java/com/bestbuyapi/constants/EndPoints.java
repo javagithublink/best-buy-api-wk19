@@ -28,4 +28,13 @@ public class EndPoints {
     public static final String DELETE_PRODUCT = "/{productID}";
 
 
+    /**
+     * Categories End Points
+     */
+
+    public static final String GET_CATEGORY_BY_ID = "/{id}";
+    public static final String CHANGE_CATEGORY_INFO = "/{id}";
+    public static final String DELETE_CATEGORY = "/{id}";
+
+
 }
